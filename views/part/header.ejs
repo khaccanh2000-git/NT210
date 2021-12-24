@@ -1,0 +1,131 @@
+<div class="ec-header-bottom d-none d-lg-block">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="ec-flex">
+        <!-- Ec Header Logo Start -->
+        <div class="align-self-center">
+          <div class="header-logo">
+            <a href="/"><img src="/images/logo/logo-uit.png" alt="Site Logo" class="logo_uit" /><img class="dark-logo"
+                src="/images/logo/dark-logo.png" alt="Site Logo" style="display: none" /></a>
+          </div>
+        </div>
+        <!-- Ec Header Logo End -->
+
+        <!-- Ec Header Search Start -->
+        <div class="align-self-center">
+          <div class="header-search">
+            <form class="ec-btn-group-form" action="/search" method="get">
+              <input class="form-control" placeholder="Enter Your Product Name..." type="search" name="name" />
+              <button class="submit" type="submit">
+                <img src="/images/icons/search.svg" class="svg_img header_svg" alt="" />
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Ec Header Search End -->
+
+        <!-- Ec Header Button Start -->
+        <div class="align-self-center">
+          <div class="ec-header-bottons">
+            <!-- Header User Start -->
+            <div class="ec-header-user dropdown">
+              <button class="dropdown-toggle" data-bs-toggle="dropdown">
+                <img src="/images/icons/user.svg" class="svg_img header_svg" alt="" />
+              </button>
+              <ul class="dropdown-menu dropdown-menu-right">
+                <li><a class="dropdown-item" href="/cart/checkout">Checkout</a></li>
+                <li>
+                  <a class="dropdown-item" href="/user/profile">Profile</a>
+                </li>
+                <li><a class="dropdown-item" href="/user/login">Login</a></li>
+                <li>
+                  <a class="dropdown-item" href="/user/register">Register</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/user/logout">Logout</a>
+                </li>
+              </ul>
+
+            </div>
+            <!-- Header User End -->
+            <!-- Header Cart Start -->
+            <a href="/cart" class="ec-header-btn ec-side-toggle">
+              <div class="header-icon">
+                <img src="/images/icons/cart.svg" class="svg_img header_svg" alt="" />
+              </div>
+              <span class="ec-header-count cart-count-lable" id="numCart1"><span id="numCart2">
+                  <% if(session.cart){%>
+                    <%= session.cart.items.length %>
+                      <%} else{%> 0 <%} %>
+                </span></span>
+            </a>
+            <!-- Header Cart End -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="ec-main-menu-desk" class="d-none d-lg-block sticky-nav">
+  <div class="container position-relative">
+    <div class="row">
+      <div class="col-md-12 align-self-center">
+        <div class="ec-main-menu">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">Categories</a>
+              <ul class="sub-menu">
+                <li><a href="#">Coming soon</a></li>
+
+
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">Products</a>
+              <ul class="sub-menu">
+
+                <li>
+                  <a href="#">Coming soon</a>
+                </li>
+
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">Pages</a>
+              <ul class="sub-menu">
+                <li><a href="#">Coming soon</a></li>
+
+
+              </ul>
+            </li>
+            <li class="dropdown">
+              <span class="main-label-note-new" data-toggle="tooltip" title="NEW"></span><a
+                href="javascript:void(0)">Others</a>
+              <ul class="sub-menu">
+                <li class="dropdown position-static">
+                  <a href="javascript:void(0)">Coming soon <i class="ecicon eci-angle-right"></i></a>
+                </li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">Blog</a>
+              <ul class="sub-menu">
+                <li><a href="#">Coming soon</a></li>
+
+
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="javascript:void(0)">Elements</a>
+              <ul class="sub-menu">
+                <li><a href="#">Coming soon</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Hot Offers</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

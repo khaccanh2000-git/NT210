@@ -1,0 +1,46 @@
+<div class="container cart-content mt-5">
+  <table class="table table-hover bg-light">
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Image</th>
+      <th>Quantity</th>
+      <th>Delete</th>
+    </tr>
+
+    <% cart.map(x=>{%>
+      <tr id="tr_cart_<%= x.id %>">
+        <td>
+          <%= x.item.name %>
+        </td>
+        <td>
+          <%= new Intl.NumberFormat('vi-VN').format(x.item.price) %>
+        </td>
+        <td><img src="<%=  x.imageSrc %>" alt="" width="50px" /></td>
+        <td>
+          <div class="edit">
+            <form action="/cart/reduce/<%= x.id%>?_method=PUT" method="POST" data-id="<%= x.id %>"
+              class="reduceFormCart">
+              <button type="submit" class="btn-primary changeQty">-</button>
+            </form>
+            <span id="qty<%= x.id %>"><span id="qty2<%= x.id %>" class="numberQty">
+                <%= x.qty %>
+              </span></span>
+            <form action="/cart/increase/<%= x.id%>?_method=PUT" method="POST" data-id="<%= x.id %>"
+              class="increaseFormCart">
+              <button type="submit" class="btn-primary changeQty">+</button>
+            </form>
+          </div>
+        </td>
+
+        <td>
+          <form action="/cart/<%= x.id %>?_method=DELETE" method="POST" data-id="<%= x.id %>" class="deleteFormCart">
+            <button type="submit" class="btnDelete btn"><i class="fa fa-trash-o"></i> </button>
+          </form>
+        </td>
+      </tr>
+      <%}) %>
+  </table>
+  <h1 id="total1"><span id="total2">Total: <%= new Intl.NumberFormat('vi-VN').format(total) %></span></h1>
+  <a href="/cart/checkout" class="btn btn-primary">Checkout</a>
+</div>

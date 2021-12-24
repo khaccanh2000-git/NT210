@@ -1,0 +1,76 @@
+<div class="form-floating mb-3">
+  <input
+    type="text"
+    required
+    class="form-control"
+    name="name"
+    placeholder="Product Name"
+    value="<%= product.name %>"
+  />
+  <label for="floatingInput">Product Name</label>
+</div>
+<div class="form-floating mb-3">
+  <input
+    type="text"
+    class="form-control"
+    name="color"
+    placeholder="Color"
+    value="<%= product.color %>"
+  />
+  <label for="floatingInput">Product Color</label>
+</div>
+<div class="form-floating mb-3">
+  <input
+    type="text"
+    required
+    class="form-control"
+    name="info"
+    placeholder="Product Information"
+    value="<%= product.info %>"
+  />
+  <label for="floatingInput">Product Information</label>
+</div>
+<div class="form-floating mb-3">
+  <input type="file" class="filepond" name="image" />
+  <label for="floatingInput">Image</label>
+</div>
+<div class="form-floating mb-3">
+  <input
+    type="text"
+    required
+    class="form-control"
+    name="price"
+    placeholder="Price "
+    value="<%= product.price %>"
+  />
+  <label for="floatingInput">Price</label>
+</div>
+<div class="form-floating mb-3">
+  <input
+    type="text"
+    required
+    class="form-control"
+    name="quantity"
+    placeholder="Product Quantity"
+    value="<%= product.quantity %>"
+  />
+  <label for="floatingInput">Product Quantity</label>
+</div>
+<div class="form-floating mb-3">
+  <select name="category">
+    <% categories.map(cate=>{%> <% if(cate.id==product.category){%>
+    <option selected value="<%= cate._id %>"><%= cate.name %></option>
+    <%} else{%>
+    <option value="<%= cate._id %>"><%= cate.name %></option>
+    <%} %> <%}) %>
+  </select>
+</div>
+
+<div class="form-floating">
+  <input
+    type="submit"
+    class="form-control btn btn-primary"
+    id="floatingPassword"
+    value="Save"
+  />
+</div>

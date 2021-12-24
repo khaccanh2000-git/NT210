@@ -1,0 +1,6 @@
+<div class="container mt-5 w-50">
+    <h1>Edit New Category </h1>
+    <form action="/category/edit/<%= category._id %>?_method=PUT" method="POST">
+       <%- include('./form') %>
+    </form>
+</div>

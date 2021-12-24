@@ -1,0 +1,29 @@
+<div class="ec-vendor-upload-detail">
+    <form class="row g-3" action="/admin/user/edit/<%= id %>?_method=PUT" method="POST">
+        <div class="col-md-6 space-t-15">
+            <label class="form-label">Name</label>
+            <input type="text" class="form-control" name="name" value="<%= name %>" />
+        </div>
+
+        <div class="col-md-12 space-t-15">
+            <label class="form-label">Address</label>
+            <input type="text" class="form-control" name="address" value="<%= address %>">
+        </div>
+
+        <div class="col-md-6 space-t-15">
+            <label class="form-label">Email</label>
+            <input type="text" class="form-control" name="email" value="<%= email %>">
+        </div>
+
+        <div class="col-md-6 space-t-15">
+            <label class="form-label">Phone number</label>
+            <input type="text" class="form-control" name="phone" value="<%= phone %>">
+        </div>
+
+        <div class="col-md-12 space-t-15">
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a href="/admin" class="btn btn-lg btn-secondary qty_close" data-bs-dismiss="modal"
+                aria-label="Close">Close</a>
+        </div>
+    </form>
+</div>

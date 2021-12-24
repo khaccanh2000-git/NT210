@@ -1,0 +1,7 @@
+<div class="container w-50">
+    <h1>Edit New Category </h1>
+    <%- include('../part/message') %>
+    <form action="/product/edit/<%= product._id %>?_method=PUT" method="POST">
+       <%- include('./form') %>
+    </form>
+</div>
